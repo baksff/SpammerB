@@ -12,10 +12,7 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
-    print(r"  ___ ___  _   __  __ __  __ ___ ___  ")
-    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \ ")
-    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   / ")
-    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\ ")
+    print(r" ")
     print()
     print(r"     Spammer: github.com/baksff/SpammerB ")
     print(r"     Translated: vk.com/idnlnety ")
@@ -52,8 +49,8 @@ def main():
 
 def sms_spam():
     banner()
-    print("Введите телефон")
-    phone = input(Style.BRIGHT + Fore.BLUE + "spammer >> " + Style.RESET_ALL)
+    print("Enter the number")
+    phone = input(Style.BRIGHT + Fore.BLUE + "SpammerB:  " + Style.RESET_ALL)
     phone = parse_phone(phone)
     start_sms_spam(phone)
 
@@ -1020,7 +1017,7 @@ def check_connection():
 
 def check_version():
     current_version = "2.3"
-    version = get("https://raw.githubusercontent.com/cludeex/spammer/master/version.txt").text
+    version = get("https://raw.githubusercontent.com/baksff/SpammerB/master/version.txt").text
     if float(current_version) < float(version):
         print()
         print(Style.BRIGHT + Fore.RED + "[*] The version is outdated and needs to be updated!" + Style.RESET_ALL)
