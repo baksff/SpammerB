@@ -39,9 +39,11 @@ def main():
             check_connection()
             update()
         elif number == "3":
-            print(Style.BRIGHT + Fore.GREEN)
+            print(Style.BRIGHT + Fore.BLUE)
             print("[SpB] The spammer was translated to the English version.")
             print("[SpB] The developer who made this spammer: https://github.com/baksff/SpammerB")
+            print("[SpB] You have 15 seconds to read it")
+            sleep(15)
             main()
         elif number == "4":
             print()
@@ -1043,6 +1045,7 @@ def update():
     update = input(Style.BRIGHT + Fore.BLUE + "SpammerB: " + Style.RESET_ALL)
     if update == "y":
         print("[SpB] The update will start in 5 seconds")
+        print("[SpB] If you want to stop it, tap Ctrl+Z")
         sleep(5)
         system("cd && rm -rf ~/SpammerB && git clone https://github.com/baksff/SpammerB && sh ~/SpammerB/install.sh")
         exit()
