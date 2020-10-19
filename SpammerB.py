@@ -59,7 +59,6 @@ def main():
         number = input(Style.BRIGHT + Fore.BLUE + "Enter the item: " + Style.RESET_ALL)
         if number == "1":
             check_connection()
-            check_version()
             sms_spam()
         elif number == "2":
             check_connection()
@@ -1054,16 +1053,6 @@ def check_connection():
         exit()
     return
 
-
-def check_version():
-    current_version = "1.2"
-    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB4ITN66XXCK3QRJVHS7RVEZM").text
-    if float(current_version) < float(version):
-        print()
-        print(Style.BRIGHT + Fore.RED + "[SpB] The version is outdated and needs to be updated!" + Style.RESET_ALL)
-        sleep(2)
-        main()
-    return
 
 
 def update():
