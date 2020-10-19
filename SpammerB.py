@@ -15,6 +15,7 @@ def banner():
     print(r"     The spammer was translated to the English version.")
     print(r"     The developer who made this spammer: https://github.com/baksff/SpammerB")
     print()
+    print(Style.BRIGHT + Fore.BLUE)
     print(r"     Translated: vk.com/idnlnety")
     print(Style.RESET_ALL)
 
@@ -1036,7 +1037,6 @@ def update():
         system("cd && rm -rf ~/SpammerB && git clone https://github.com/baksff/SpammerB && sh ~/SpammerB/install.sh")
         exit()
     else:
-        print("[SpB] The update was canceled")
         main()
 
 
