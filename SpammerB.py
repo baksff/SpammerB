@@ -12,12 +12,10 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
-    print(r"  ___ ___  _   __  __ __  __ ___ ___  __    ")
-    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \|__| ")
-    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   /|  \ ")
-    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\|__/    ")
+    print(r"     The spammer was translated to the English version.")
+    print(r"     The developer who made this spammer: https://github.com/baksff/SpammerB")
     print()
-    print(r"     Spammer: github.com/baksff/SpammerB")
+    print(r"     Translated: vk.com/idnlnety")
     print(Style.RESET_ALL)
 
 
@@ -44,7 +42,7 @@ def main():
             exit()
         else:
             print()
-            print(Style.BRIGHT + Fore.RED + "[*] This selected item is specified incorrect" + Style.RESET_ALL)
+            print(Style.BRIGHT + Fore.RED + "[SpB] This selected item is specified incorrect" + Style.RESET_ALL)
             sleep(1)
             main()
 
@@ -59,7 +57,7 @@ def sms_spam():
 
 def start_sms_spam(phone):
     name = ""
-    for _ in range(11):
+    for _ in range(12):
         name = name + choice("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")
         password = name + choice("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")
         email = name + "@gmail.com"
@@ -983,7 +981,7 @@ def parse_phone(phone):
                 phone = "7" + phone
         else:
             print()
-            print(Style.BRIGHT + Fore.RED + "[*] The phone number is incorrect" + Style.RESET_ALL)
+            print(Style.BRIGHT + Fore.RED + "[SpB] The phone number is incorrect" + Style.RESET_ALL)
             sleep(1)
             sms_spam()
         return phone
@@ -1011,7 +1009,7 @@ def check_connection():
         get("http://google.com")
     except ConnectionError:
         print()
-        print(Style.BRIGHT + Fore.RED + "[*] No Internet connection" + Style.RESET_ALL)
+        print(Style.BRIGHT + Fore.RED + "[SpB] No Internet connection" + Style.RESET_ALL)
         print()
         exit()
     return
@@ -1022,7 +1020,7 @@ def check_version():
     version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB3PSDNB7HLQZR4BSVS7RU5GS").text
     if float(current_version) < float(version):
         print()
-        print(Style.BRIGHT + Fore.RED + "[*] The version is outdated and needs to be updated!" + Style.RESET_ALL)
+        print(Style.BRIGHT + Fore.RED + "[SpB] The version is outdated and needs to be updated!" + Style.RESET_ALL)
         sleep(2)
         main()
     return
@@ -1033,9 +1031,12 @@ def update():
     print("Are you sure, what you want to update? (y/n)")
     update = input(Style.BRIGHT + Fore.BLUE + "SpammerB: " + Style.RESET_ALL)
     if update == "y":
+        print("[SpB] The update will start in 5 seconds")
+        sleep(5)
         system("cd && rm -rf ~/SpammerB && git clone https://github.com/baksff/SpammerB && sh ~/SpammerB/install.sh")
         exit()
     else:
+        print("[SpB] The update was canceled")
         main()
 
 
