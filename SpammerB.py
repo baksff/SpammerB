@@ -12,8 +12,12 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
+    print(r"  ___ ___  _   __  __ __  __ ___ ___  ")
+    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \ ")
+    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   / ")
+    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\ ")
+    print()
     print(r"     Spammer: github.com/baksff/SpammerB")
-    print(r"     Translated: vk.com/idnlnety")
     print(Style.RESET_ALL)
 
 
