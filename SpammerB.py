@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import os
+import time
+import requests, random, datetime, sys, time, argparse, os, colorama
 from os import name, system
 from random import choice, randint
 from sys import argv
