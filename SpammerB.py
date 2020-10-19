@@ -42,6 +42,7 @@ def main():
             print(Style.BRIGHT + Fore.GREEN)
             print("[SpB] The spammer was translated to the English version.")
             print("[SpB] The developer who made this spammer: https://github.com/baksff/SpammerB")
+            main()
         elif number == "4":
             print()
             exit()
@@ -1026,7 +1027,7 @@ def check_connection():
 
 
 def check_version():
-    current_version = "1.1"
+    current_version = "1.2"
     version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB5BEE7KJGRV67ZKD4S7RVCIW").text
     if float(current_version) < float(version):
         print()
