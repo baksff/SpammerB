@@ -4,6 +4,7 @@ from random import choice, randint
 from sys import argv
 from time import sleep
 from colorama import Fore, Style
+from colorama import init
 from fake_useragent import UserAgent
 from requests import get, post
 from requests.exceptions import ConnectionError
