@@ -8,6 +8,28 @@ from fake_useragent import UserAgent
 from requests import get, post
 from requests.exceptions import ConnectionError
 
+init()
+os.system("title SpammerB")
+print(Fore.YELLOW)
+os.system("clear")
+os.system("CLS")
+print("   --|| Loading SpammerB ||--")
+
+print(Fore.RED)
+print("-[                    ]- 0% ")
+time.sleep(1)
+print("-[=====               ]- 25%")
+time.sleep(1)
+print("-[==========          ]- 50%")
+time.sleep(1)
+print("-[===============     ]- 75%")
+time.sleep(3)
+print("-[====================]- 100%")
+time.sleep(1)
+print(Fore.YELLOW)
+print("--|| Loading completed ||--")
+print("Press ENTER to continue .....")
+input()
 
 def banner():
     system("cls" if name == "nt" else "clear")
