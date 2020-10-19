@@ -12,10 +12,10 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
-    print(r"  ___ ___  _   __  __ __  __ ___ ___  ")
-    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \ ")
-    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   / ")
-    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\ ")
+    print(r"  ___ ___  _   __  __ __  __ ___ ___  __    ")
+    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \|__| ")
+    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   /|  \ ")
+    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\|__/    ")
     print()
     print(r"     Spammer: github.com/baksff/SpammerB")
     print(Style.RESET_ALL)
@@ -52,14 +52,14 @@ def main():
 def sms_spam():
     banner()
     print("Enter the number")
-    phone = input(Style.BRIGHT + Fore.BLUE + "SpammerB:  " + Style.RESET_ALL)
+    phone = input(Style.BRIGHT + Fore.BLUE + "SpammerB >>  " + Style.RESET_ALL)
     phone = parse_phone(phone)
     start_sms_spam(phone)
 
 
 def start_sms_spam(phone):
     name = ""
-    for _ in range(12):
+    for _ in range(11):
         name = name + choice("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")
         password = name + choice("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")
         email = name + "@gmail.com"
@@ -1018,7 +1018,7 @@ def check_connection():
 
 
 def check_version():
-    current_version = "2.3"
+    current_version = "1.0"
     version = get("https://raw.githubusercontent.com/baksff/SpammerB/master/version.txt").text
     if float(current_version) < float(version):
         print()
