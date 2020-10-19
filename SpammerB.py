@@ -1033,7 +1033,7 @@ def update():
     if update == "y":
     	print(Style.BRIGHT + Fore.BLUE + "Update has been started")
     	sleep(2)
-        system("cd && rm -rf ~/spammer && git clone https://github.com/baksff/SpammerB && sh ~/spammer/install.sh")
+        system("cd && rm -rf ~/SpammerB && git clone https://github.com/baksff/SpammerB && sh ~/SpammerB/install.sh")
         exit()
     elif update =="n":
     	print(Style.BRIGHT + Fore.RED + "[*] You refused to upgrade!")
