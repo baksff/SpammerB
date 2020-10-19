@@ -1031,7 +1031,7 @@ def check_connection():
 
 def check_version():
     current_version = "1.2"
-    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB5BEE7KJGRV67ZKD4S7RVCIW").text
+    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt?token=ARFDCB4ITN66XXCK3QRJVHS7RVEZM").text
     if float(current_version) < float(version):
         print()
         print(Style.BRIGHT + Fore.RED + "[SpB] The version is outdated and needs to be updated!" + Style.RESET_ALL)
