@@ -12,10 +12,8 @@ from requests.exceptions import ConnectionError
 def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
-    print(r" ")
-    print()
-    print(r"     Spammer: github.com/baksff/SpammerB ")
-    print(r"     Translated: vk.com/idnlnety ")
+    print(r"     Spammer: github.com/baksff/SpammerB")
+    print(r"     Translated: vk.com/idnlnety")
     print(Style.RESET_ALL)
 
 
@@ -1029,15 +1027,10 @@ def check_version():
 def update():
     banner()
     print("Are you sure, what you want to update? (y/n)")
-    update = input(Style.BRIGHT + Fore.BLUE + "spammer >> " + Style.RESET_ALL)
+    update = input(Style.BRIGHT + Fore.BLUE + "SpammerB: " + Style.RESET_ALL)
     if update == "y":
-    	print(Style.BRIGHT + Fore.BLUE + "Update has been started")
-    	sleep(2)
         system("cd && rm -rf ~/SpammerB && git clone https://github.com/baksff/SpammerB && sh ~/SpammerB/install.sh")
         exit()
-    elif update =="n":
-    	print(Style.BRIGHT + Fore.RED + "[*] You refused to upgrade!")
-    	exit()
     else:
         main()
 
