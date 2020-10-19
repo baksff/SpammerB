@@ -39,10 +39,11 @@ def main():
             check_connection()
             update()
         elif number == "3":
-            print(Style.BRIGHT + Fore.BLUE)
+            print(Style.BRIGHT + Fore.RED)
+            print("[SpB] You have 15 seconds to read it")
+            print(Fore.GREEN)
             print("[SpB] The spammer was translated to the English version.")
             print("[SpB] The developer who made this spammer: https://github.com/baksff/SpammerB")
-            print("[SpB] You have 15 seconds to read it")
             sleep(15)
             main()
         elif number == "4":
