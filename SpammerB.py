@@ -1067,6 +1067,7 @@ def update():
         print("[SpB] You refused to download the updates")
         print("[SpB] However, we recommend downloading updates")
         sleep(3)
+        main()
     else:
         main()
 
