@@ -1019,7 +1019,7 @@ def check_connection():
 
 def check_version():
     current_version = "1.0"
-    version = get("https://raw.githubusercontent.com/baksff/SpammerB/master/version.txt").text
+    version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt").text
     if float(current_version) < float(version):
         print()
         print(Style.BRIGHT + Fore.RED + "[*] The version is outdated and needs to be updated!" + Style.RESET_ALL)
