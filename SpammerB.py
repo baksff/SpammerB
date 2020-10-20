@@ -31,7 +31,7 @@ print("    -[====================]- 100%")
 time.sleep(1)
 print(Fore.GREEN)
 print("   --|| Loading completed ||--")
-print("Press ENTER to continue .....")
+print("     Press ENTER to continue .....")
 input()
 
 def banner():
