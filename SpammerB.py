@@ -38,7 +38,7 @@ def banner():
     system("cls" if name == "nt" else "clear")
     print(Style.BRIGHT + Fore.GREEN)
     print("       -[SpammerB - English Version]-      ")
-    print("       -[Press 3 for information]-         ")
+    print("       -[Press 4 for information]-         ")
     print(Style.RESET_ALL)
 
 def main():
@@ -49,8 +49,9 @@ def main():
         banner()
         print("[1] SMS-Spammer.")
         print("[2] Update SpammerB.")
-        print("[3] Info.")
-        print("[4] Exit.")
+        print("[3] Phone-Spammer")
+        print("[4] Info.")
+        print("[5] Exit.")
         print()
         number = input(Style.BRIGHT + Fore.BLUE + "Enter the item: " + Style.RESET_ALL)
         if number == "1":
@@ -60,14 +61,18 @@ def main():
         elif number == "2":
             check_connection()
             update()
-        elif number == "3":
+        elif number =="3":
+            check_connection()
+            check_version()
+            print("Эта функция есть только в Pro версии.")
+        elif number == "4":
             print(Style.BRIGHT + Fore.RED + "[SpB] You have 15 seconds to read it")
             print(Fore.GREEN)
             print("[SpB] The SpammerB was translated to the English version.")
             print("[SpB] The developer who made this SpammerB: https://github.com/baksff/SpammerB")
             sleep(15)
             main()
-        elif number == "4":
+        elif number == "5":
             print()
             exit()
         else:
@@ -1039,7 +1044,7 @@ def format_phone(phone, phone_mask):
         return phone_mask
 
 def check_version():
-    current_version = "1.2"
+    current_version = "1.3"
     version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt").text
     if float(current_version) < float(version):
         print()
@@ -1074,7 +1079,7 @@ def update():
         print("[SpB] You refused to download the updates")
         print("[SpB] However, we recommend downloading updates")
         sleep(3)
-        main()
+        exit()
     else:
         main()
 
