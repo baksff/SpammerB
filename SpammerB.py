@@ -49,7 +49,7 @@ def main():
         banner()
         print("[1] SMS-Spammer.")
         print("[2] Update SpammerB.")
-        print("[3] Check Version")
+        print("[3] Delete SpammerB")
         print("[4] Info.")
         print("[5] Exit.")
         print()
@@ -63,7 +63,7 @@ def main():
             update()
         elif number =="3":
             check_connection()
-            check_version()
+            delete()
         elif number == "4":
             print(Style.BRIGHT + Fore.RED + "[SpB] You have 15 seconds to read it")
             print(Fore.GREEN)
@@ -1049,8 +1049,22 @@ def check_version():
         print()
         print(Style.BRIGHT + Fore.RED + "[SpB] The version is outdated and needs to be updated!" + Style.RESET_ALL)
         sleep(2)
-        main()
+        exit()
     return
+
+def delete():
+    banner()
+    print("Are you sure, what you want to delete spammer? (y/n)")
+    delete = input(Style.BRIGHT + Fore.RED + "SpammerB" + Style.RESET_ALL)
+    if delete == "y":
+        print("[SpB] Will be start deleting SpammerB, after 5 second")
+        sleep(5)
+        system("cd && rm -rf ~/SpammerB")
+        print("[SpB] End :(")
+    elif delete == "n":
+        print("[SpB] I'm glad you're staying with us :)")
+    else:
+        main()
 
 def check_connection():
     try:
