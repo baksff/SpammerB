@@ -13,7 +13,7 @@ from requests import get, post
 from requests.exceptions import ConnectionError
 
 init()
-os.system("title SMS-Bomber")
+os.system("title SpammerB")
 print(Fore.YELLOW)
 os.system("clear")
 print("   --|| Loading SpammerB ||--")
@@ -49,7 +49,7 @@ def main():
         banner()
         print("[1] SMS-Spammer.")
         print("[2] Update SpammerB.")
-        print("[3] Phone-Spammer")
+        print("[3] Check Version")
         print("[4] Info.")
         print("[5] Exit.")
         print()
@@ -64,7 +64,6 @@ def main():
         elif number =="3":
             check_connection()
             check_version()
-            print("Эта функция есть только в Pro версии.")
         elif number == "4":
             print(Style.BRIGHT + Fore.RED + "[SpB] You have 15 seconds to read it")
             print(Fore.GREEN)
