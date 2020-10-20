@@ -13,7 +13,7 @@ from requests import get, post
 from requests.exceptions import ConnectionError
 
 init()
-os.system("title SpammerB")
+os.system("title SMS-Bomber")
 print(Fore.YELLOW)
 os.system("clear")
 print("   --|| Loading SpammerB ||--")
@@ -35,14 +35,32 @@ print("Press ENTER to continue .....")
 input()
 
 def banner():
-    system("cls" if name == "nt" else "clear")
-    print(Style.BRIGHT + Fore.GREEN)
-    print(r"  ___ ___  _   __  __ __  __ ___ ___  ")
-    print(r" / __| _ \/_\ |  \/  |  \/  | __| _ \ ")
-    print(r" \__ \  _/ _ \| |\/| | |\/| | _||   / ")
-    print(r" |___/_|/_/ \_\_|  |_|_|  |_|___|_|_\ ")
-    print(Style.RESET_ALL)
+    print(Fore.YELLOW)
+    banner = """
 
+    ░██████╗███╗░░░███╗░██████╗░░░░░░██████╗░░█████╗░███╗░░░███╗██████╗░███████╗██████╗
+    ██╔════╝████╗░████║██╔════╝░░░░░░██╔══██╗██╔══██╗████╗░████║██╔══██╗██╔════╝██╔══██╗
+    ╚█████╗░██╔████╔██║╚█████╗░█████╗██████╦╝██║░░██║██╔████╔██║██████╦╝█████╗░░██████╔╝
+    ░╚═══██╗██║╚██╔╝██║░╚═══██╗╚════╝██╔══██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══╝░░██╔══██╗
+    ██████╔╝██║░╚═╝░██║██████╔╝░░░░░░██████╦╝╚█████╔╝██║░╚═╝░██║██████╦╝███████╗██║░░██║
+    ╚═════╝░╚═╝░░░░░╚═╝╚═════╝░░░░░░░╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝   
+                                    v.1.2 (Developer: https://github.com/baksff/SpammerB)   
+      
+      __________________________________________________________________________________________
+      |                                                                                         |
+      | VK -- https://vk.com/baksff                                                             |
+      |                                                                                         |
+      | Github -- https://github.com/baksff/SpammerB                                            |   
+      |_________________________________________________________________________________________|                                                                                         
+
+                                  
+
+    """
+
+    print(banner)
+
+
+banner()
 
 def main():
     try:
@@ -51,7 +69,7 @@ def main():
     except IndexError:
         banner()
         print("[1] SMS-Spammer.")
-        print("[2] Update spammer.")
+        print("[2] Update SpammerB.")
         print("[3] Info.")
         print("[4] Exit.")
         print()
@@ -65,8 +83,8 @@ def main():
         elif number == "3":
             print(Style.BRIGHT + Fore.RED + "[SpB] You have 15 seconds to read it")
             print(Fore.GREEN)
-            print("[SpB] The spammer was translated to the English version.")
-            print("[SpB] The developer who made this spammer: https://github.com/baksff/SpammerB")
+            print("[SpB] The SpammerB was translated to the English version.")
+            print("[SpB] The developer who made this SpammerB: https://github.com/baksff/SpammerB")
             sleep(15)
             main()
         elif number == "4":
@@ -98,7 +116,7 @@ def start_sms_spam(phone):
     proxies = generate_proxy()
     banner()
     print("Phone number: " + Style.BRIGHT + Fore.BLUE + phone + Style.RESET_ALL)
-    print("Spammer started.")
+    print("SpammerB started.")
     print("To stop it - tap Ctrl+Z")
     while True:
         try:
