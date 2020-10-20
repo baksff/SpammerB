@@ -1043,7 +1043,7 @@ def format_phone(phone, phone_mask):
         return phone_mask
 
 def check_version():
-    current_version = "1.2"
+    current_version = "1.3"
     version = get("https://raw.githubusercontent.com/baksff/SpammerB/main/version.txt").text
     if float(current_version) < float(version):
         print()
